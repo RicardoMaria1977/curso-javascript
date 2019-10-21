@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time do coração</title>
+</head>
+
+<body>
+    <h1>Qual seu time do coração</h1>
+    Meu time é <input type="text" nome="time" id="time">
+
+    <input type="button" value="verificar" onclick="verificar()">
+
+    <div id="equipe">
+
+    </div>
+    <script>
+        function verificar() {
+            debugger;
+            var time = window.document.querySelector('input#time')
+            var equipe = window.document.querySelector('div#equipe')
+            var nome = time.value;
+            equipe.innerHTML = `<p>Seu time é <strong> ${nome}</strong></p>`
+                if (nome == 'Palmeiras') {
+                    equipe.innerHTML += `<p>Você não tem <strong> Mundial!!! </strong> chupaaaaaaaa </p>`
+                }
+                else  {
+                    equipe.innerHTML += `<p>Você é Campeão do <strong> Mundo!!! </strong> </p>`
+                }
+        }
+
+    </script>
+</body>
+
+</html>
